@@ -30,15 +30,15 @@ jobs:
     # Step 4: Run the Postman collection with environment, globals, and generate HTML report
     - name: Run Postman Collection
       run: |
-        newman run postman/MyCollection.json \
-          --environment postman/MyEnvironment.json \
-          --globals postman/MyGlobals.json \
+        newman run MyCollection.json \
+          --environment MyEnvironment.json \
+          --globals MyGlobals.json \
           --reporters cli,html \
-          --reporter-html-export newman/report.html
+          --reporter-html-export report/report.html
 
     # Step 5: Upload HTML report as an artifact
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
       with:
         name: newman-report
-        path: newman/report.html
+        path: report/report.html
