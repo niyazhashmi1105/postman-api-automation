@@ -21,7 +21,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Ensure Node.js is installed
+        node-version: '18'  # Ensure Node.js is installed
 
     # Step 3: Install Newman
     - name: Install Newman
@@ -30,9 +30,9 @@ jobs:
     # Step 4: Run the Postman collection with environment, globals, and generate HTML report
     - name: Run Postman Collection
       run: |
-        newman run MyCollection.json \
-          --environment MyEnvironment.json \
-          --globals MyGlobals.json \
+        newman run postman/MyCollection.json \
+          --environment postman/MyEnvironment.json \
+          --globals postman/MyGlobals.json \
           --reporters cli,html \
           --reporter-html-export report/report.html
 
