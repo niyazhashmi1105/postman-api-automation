@@ -1,0 +1,15 @@
+{
+	"id": "69a68e97-806d-4139-88b5-d389b5031c92",
+	"name": "QA",
+	"values": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-10-22T17:40:06.064Z",
+	"_postman_exported_using": "Postman/11.17.2-241016-0848"
+}
