@@ -38,11 +38,11 @@ jobs:
           --environment postman/MyEnvironment.json \
           --globals postman/MyGlobals.json \
           --reporters cli,html \
-          --reporter-html-export report/report.html
+          --reporter-html-export newman/report.html
 
     # Step 6: Upload HTML report as an artifact
     - name: Upload HTML Report
       uses: actions/upload-artifact@v3
       with:
         name: newman-report
-        path: report/report.html
+        path: newman/report.html
