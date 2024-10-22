@@ -202,8 +202,8 @@
 							"    pm.expect(jsonData).to.have.property(\"firstname\");",
 							"    pm.expect(jsonData).to.have.property(\"lastname\");",
 							"    pm.expect(jsonData.totalprice).to.eql(111);",
-							"    pm.expect(jsonData.bookingdates.checkin).to.eql(\"2018-01-01\");",
-							"    pm.expect(jsonData.bookingdates.checkout).to.eql(\"2019-01-01\");",
+							"    pm.expect(jsonData.bookingdates.checkin).to.eql(\"2013-02-23\");",
+							"    pm.expect(jsonData.bookingdates.checkout).to.eql(\"2014-10-23\");",
 							"});"
 						],
 						"type": "text/javascript",
