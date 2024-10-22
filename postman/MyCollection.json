@@ -122,6 +122,8 @@
 							"let jsonData = pm.response.json();",
 							"",
 							"// Validate the JSON schema",
+							"const Ajv = require('ajv');",
+							"const ajv = new Ajv();",
 							"pm.test(\"Validate response schema\", function () {",
 							"    pm.expect(ajv.validate(jsonData, schema)).to.be.true;",
 							"});",
