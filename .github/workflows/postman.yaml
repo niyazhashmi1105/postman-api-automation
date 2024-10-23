@@ -52,7 +52,7 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Test Results for Build #${{ github.run_number }} - ${{ github.repository }} for POSTMAN API Automation"
-          html_body: file://report.html
+          html_body: file://newman/report.html
           # body: |
           #     This Test case results ran after executing
           #     all postman Booking API collections for all HTTP Request Methods. Please find the attached report.
