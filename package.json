@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test:collection":"newman run postman/MyCollection.json --environment postman/MyEnvironment.json --globals postman/MyGlobals.json -r htmlextra --reporter-htmlextra-export newman/report.html"
+    "test:collection": "newman run postman/MyCollection.json --environment postman/MyEnvironment.json --globals postman/MyGlobals.json -r htmlextra --reporter-htmlextra-export newman/report.html"
   },
   "dependencies": {
     "newman-reporter-html": "^1.0.5"

@@ -42,3 +42,20 @@ jobs:
       with:
         name: newman-report
         path: newman/report.html
+
+    # Step 7: Sending email with report attachment
+    - name: Send email with HTML report
+        uses: dawidd6/action-send-mail@v3
+        with:
+            server_address: smtp.gmail.com
+            server_port: 465
+            username: ${{ secrets.EMAIL_USERNAME }}
+            password: ${{ secrets.EMAIL_PASSWORD }}
+            subject: "Test Results for Build #${{ github.run_number }} - ${{ github.repository }} for POSTMAN API Automation"
+            body: |
+              This Test case results ran after executing
+              all postman Booking API collections for all HTTP Request Methods. Please find the attached report.
+            to: niyazhashmi161921@gmail.com
+            from: niyazhashmi161921@gmail.com
+            attachments: newman/report.html
+            secure: true
