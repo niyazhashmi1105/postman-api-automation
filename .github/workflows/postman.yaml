@@ -34,7 +34,7 @@ jobs:
     # Step 5: Run the Postman collection with environment, globals, and generate HTML report
     - name: Run Postman Collection
       run: |
-        newman run postman/MyCollection.json --environment postman/MyEnvironment.json --globals postman/MyGlobals.json -r htmlextra --reporter-htmlextra-export newman/report.html
+        newman run postman/BookingAPIsCollection.json --environment postman/BookingAPIsEnvironmentVariables.json --globals postman/BookingAPIsGlobals.json -r htmlextra --reporter-htmlextra-export newman/report.html
 
     # Step 6: Upload HTML report as an artifact
     - name: Upload HTML Report
